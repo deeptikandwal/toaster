@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.mykotlinapp.fragments.MainFragment"
+        android:label="MainFragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_viewBalanceFragment"
+            app:destination="@id/viewBalanceFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_chooseRecepientFragment"
+            app:destination="@id/chooseRecepientFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_viewTransactionFragment"
+            app:destination="@id/viewTransactionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chooseRecepientFragment"
+        android:name="com.example.mykotlinapp.fragments.ChooseRecepientFragment"
+        android:label="ChooseRecepientFragment" >
+        <action
+            android:id="@+id/action_chooseRecepientFragment_to_specifyFragment"
+            app:destination="@id/specifyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/confirmationFragment"
+        android:name="com.example.mykotlinapp.fragments.ConfirmationFragment"
+        android:label="ConfirmationFragment" />
+    <fragment
+        android:id="@+id/specifyFragment"
+        android:name="com.example.mykotlinapp.fragments.SpecifyFragment"
+        android:label="SpecifyFragment" >
+        <action
+            android:id="@+id/action_specifyFragment_to_confirmationFragment"
+            app:destination="@id/confirmationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewBalanceFragment"
+        android:name="com.example.mykotlinapp.fragments.ViewBalanceFragment"
+        android:label="ViewBalanceFragment" />
+    <fragment
+        android:id="@+id/viewTransactionFragment"
+        android:name="com.example.mykotlinapp.fragments.ViewTransactionFragment"
+        android:label="ViewTransactionFragment" />
+</navigation>
